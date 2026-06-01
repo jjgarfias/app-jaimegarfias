@@ -1,0 +1,14 @@
+@import url('./home.css');
+@import url('./second.css');
+@import "tailwindcss";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #f7f5ef;
+  color: #202124;
+}

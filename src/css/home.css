@@ -1,0 +1,9 @@
+home-page {
+  display: block;
+  min-height: 100%;
+  overflow-y: auto;
+  background:
+    linear-gradient(135deg, rgba(44, 112, 94, 0.1), transparent 32rem),
+    linear-gradient(220deg, rgba(31, 92, 168, 0.12), transparent 30rem),
+    #f7f5ef;
+}
