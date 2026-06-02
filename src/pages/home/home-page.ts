@@ -9,125 +9,129 @@ export class HomePage extends LitElement {
 
   render() {
     return html`
-      <section class="mx-auto w-[min(1180px,calc(100%-32px))] pb-14 pt-5 max-[820px]:w-[min(100%-24px,680px)] max-[820px]:pt-3">
-        <header class="flex min-h-14 items-center justify-between gap-6 max-[820px]:items-start" aria-label="Main navigation">
-          <a
-            class="flex h-11 w-11 items-center justify-center rounded-full border border-black/15 bg-[#202124] font-extrabold text-[#f7f5ef] no-underline"
-            href="/"
-            aria-label="Jaime Garfias home"
-          >
-            <span>JG</span>
-          </a>
+      <main class="construction-page" aria-labelledby="construction-title">
+        <div class="construction-nebula" aria-hidden="true"></div>
 
-          <nav
-            class="flex items-center gap-2 rounded-full border border-black/10 bg-white/70 p-1.5 backdrop-blur-xl max-[820px]:w-full max-[820px]:justify-between max-[480px]:gap-0.5 max-[480px]:p-1"
-          >
-            <a class="rounded-full px-3.5 py-2.5 text-[0.94rem] font-bold text-[#3d3f42] no-underline hover:bg-[#e6eee9] hover:text-[#174f42] max-[820px]:flex-1 max-[820px]:text-center max-[480px]:px-2 max-[480px]:text-[0.86rem]" href="#about">About</a>
-            <a class="rounded-full px-3.5 py-2.5 text-[0.94rem] font-bold text-[#3d3f42] no-underline hover:bg-[#e6eee9] hover:text-[#174f42] max-[820px]:flex-1 max-[820px]:text-center max-[480px]:px-2 max-[480px]:text-[0.86rem]" href="#portfolio">Portfolio</a>
-            <a class="rounded-full px-3.5 py-2.5 text-[0.94rem] font-bold text-[#3d3f42] no-underline hover:bg-[#e6eee9] hover:text-[#174f42] max-[820px]:flex-1 max-[820px]:text-center max-[480px]:px-2 max-[480px]:text-[0.86rem]" href="#projects">Projects</a>
-          </nav>
-        </header>
+        <section class="construction-scene" aria-label="Portafolio en construccion">
+          <div class="construction-stars" aria-hidden="true"></div>
 
-        <section
-          class="grid min-h-[min(720px,calc(100vh-76px))] grid-cols-[minmax(0,0.95fr)_minmax(320px,1.05fr)] items-center gap-[clamp(28px,5vw,72px)] py-12 pb-[72px] max-[820px]:min-h-0 max-[820px]:grid-cols-1 max-[820px]:py-10 max-[820px]:pb-14"
-          aria-labelledby="hero-title"
-        >
-          <div class="max-w-[620px]">
-            <p class="m-0 text-xs font-extrabold uppercase text-[#1f6b59]">Software engineer - Cloud builder - Product thinker</p>
-            <h1 class="my-4 text-[clamp(3.4rem,8vw,7rem)] font-extrabold leading-[0.9] text-[#151719] max-[820px]:text-[clamp(3rem,16vw,5.4rem)]" id="hero-title">Jaime Garfias</h1>
-            <p class="m-0 max-w-[580px] text-[clamp(1.08rem,2vw,1.35rem)] leading-relaxed text-[#4b4f54]">
-              Desarrollo experiencias digitales con Web Components, arquitecturas frontend modernas
-              y despliegues preparados para escalar con infraestructura en la nube.
-            </p>
+          <svg class="construction-illustration" viewBox="0 0 900 506" role="img" aria-labelledby="space-title space-desc">
+            <title id="space-title">Astronauta reparando una nave espacial</title>
+            <desc id="space-desc">Un astronauta flota en el espacio mientras repara una nave espacial.</desc>
 
-            <div class="mt-8 flex flex-wrap gap-3 max-[480px]:flex-col" aria-label="Primary actions">
-              <a class="inline-flex min-h-12 items-center justify-center rounded-full border border-transparent bg-[#202124] px-5 font-bold text-white no-underline max-[480px]:w-full" href="#projects">Ver proyectos</a>
-              <a class="inline-flex min-h-12 items-center justify-center rounded-full border border-black/20 bg-white/70 px-5 font-bold text-[#202124] no-underline max-[480px]:w-full" href="#about">Conocer perfil</a>
-            </div>
-          </div>
-
-          <figure class="m-0 overflow-hidden rounded-lg border border-black/10 bg-white shadow-[0_28px_80px_rgba(28,44,42,0.16)]">
-            <img
-              class="block aspect-4/3 w-full object-cover"
-              src="/images/portfolio-hero.png"
-              alt="Abstract digital workspace with interface panels and cloud infrastructure shapes"
+            <path
+              class="cable"
+              d="M385 350 C450 440, 560 400, 620 330"
+              fill="none"
+              stroke="rgba(180,240,255,0.55)"
+              stroke-width="4"
+              stroke-linecap="round"
             />
-          </figure>
+
+            <g class="rocket-group rocket-glow">
+              <g class="thruster">
+                <path
+                  d="M715 314 C770 322, 795 350, 718 365 C738 347, 738 332, 715 314Z"
+                  fill="url(#fireGradient)"
+                  opacity="0.9"
+                />
+                <path
+                  d="M712 326 C750 333, 760 348, 713 356 C725 342, 724 336, 712 326Z"
+                  fill="#fff3b0"
+                  opacity="0.9"
+                />
+              </g>
+
+              <path
+                d="M455 275 C505 170, 650 115, 730 130 C720 215, 660 325, 535 360 C500 335, 475 305, 455 275Z"
+                fill="#e9eef7"
+              />
+              <path
+                d="M455 275 C505 170, 650 115, 730 130 C710 185, 650 250, 535 360 C500 335, 475 305, 455 275Z"
+                fill="rgba(120,160,190,0.25)"
+              />
+
+              <circle cx="620" cy="218" r="38" fill="#18233a" />
+              <circle cx="610" cy="205" r="14" fill="rgba(255,255,255,0.85)" />
+
+              <path d="M520 250 C470 220, 430 220, 390 252 C430 245, 470 265, 500 294Z" fill="#ccd6e4" />
+              <path d="M560 342 C555 390, 585 420, 635 432 C620 395, 627 360, 655 318Z" fill="#ccd6e4" />
+
+              <g transform="translate(505 304)">
+                <circle class="damage-light" cx="0" cy="0" r="15" fill="#ff2d55" opacity="0.65" />
+                <path d="M-20 -8 L-6 -3 L-16 7 L0 3 L10 15 L13 0 L25 -6 L8 -8 L2 -22 L-7 -9Z" fill="#12131c" opacity="0.72" />
+              </g>
+
+              <path
+                d="M535 175 C555 235, 585 285, 655 315"
+                fill="none"
+                stroke="rgba(20,30,45,0.22)"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M493 285 C545 297, 595 290, 657 254"
+                fill="none"
+                stroke="rgba(20,30,45,0.18)"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+            </g>
+
+            <g class="astronaut-group helmet-glow">
+              <rect x="307" y="265" width="50" height="78" rx="14" fill="#7c8798" />
+              <rect x="315" y="278" width="16" height="38" rx="6" fill="#505a68" />
+
+              <g class="leg-left">
+                <path d="M340 354 C325 384, 314 410, 295 432" fill="none" stroke="#dce7f7" stroke-width="21" stroke-linecap="round" />
+                <rect x="273" y="422" width="45" height="20" rx="8" fill="#9ba8ba" transform="rotate(-25 296 432)" />
+              </g>
+
+              <g class="leg-right">
+                <path d="M374 354 C392 382, 408 406, 430 426" fill="none" stroke="#dce7f7" stroke-width="21" stroke-linecap="round" />
+                <rect x="413" y="416" width="45" height="20" rx="8" fill="#9ba8ba" transform="rotate(28 435 426)" />
+              </g>
+
+              <rect x="322" y="258" width="70" height="105" rx="28" fill="#eef5ff" />
+              <rect x="338" y="285" width="38" height="45" rx="12" fill="#adb9cc" />
+              <circle cx="350" cy="306" r="4" fill="#4ade80" />
+              <circle cx="365" cy="306" r="4" fill="#facc15" />
+
+              <circle cx="358" cy="216" r="48" fill="#eef5ff" />
+              <circle cx="358" cy="216" r="34" fill="#172033" />
+              <path d="M333 205 C350 185, 383 188, 393 213 C373 205, 351 207, 333 226Z" fill="rgba(155,230,255,0.58)" />
+
+              <path d="M328 278 C290 285, 270 310, 255 337" fill="none" stroke="#dce7f7" stroke-width="18" stroke-linecap="round" />
+              <circle cx="254" cy="337" r="12" fill="#9ba8ba" />
+
+              <g class="arm-tool">
+                <path d="M386 280 C415 276, 438 288, 463 307" fill="none" stroke="#dce7f7" stroke-width="18" stroke-linecap="round" />
+                <circle cx="465" cy="308" r="11" fill="#9ba8ba" />
+                <rect x="462" y="300" width="58" height="13" rx="5" fill="#2a3142" transform="rotate(18 462 300)" />
+                <rect x="506" y="310" width="28" height="8" rx="4" fill="#a8f5ff" transform="rotate(18 506 310)" />
+              </g>
+            </g>
+
+            <g>
+              <circle class="spark s1" style="--x: 42px; --y: -28px;" cx="512" cy="311" r="4" fill="#fff3a3" />
+              <circle class="spark s2" style="--x: 38px; --y: 25px;" cx="512" cy="311" r="3" fill="#ffdd55" />
+              <circle class="spark s3" style="--x: -30px; --y: -35px;" cx="512" cy="311" r="3.5" fill="#ffffff" />
+              <circle class="spark s4" style="--x: -36px; --y: 26px;" cx="512" cy="311" r="3" fill="#ff7a18" />
+              <circle class="spark s5" style="--x: 8px; --y: -52px;" cx="512" cy="311" r="2.8" fill="#fff6cc" />
+            </g>
+
+            <defs>
+              <linearGradient id="fireGradient" x1="715" y1="340" x2="790" y2="340" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#fff3a3" />
+                <stop offset="35%" stop-color="#ff9f1c" />
+                <stop offset="100%" stop-color="#ff2d55" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <p class="construction-caption" id="construction-title">En construcción</p>
         </section>
-
-        <section class="border-t border-black/10 py-[clamp(48px,7vw,88px)]" id="about" aria-labelledby="about-title">
-          <div class="mb-7 grid grid-cols-[minmax(150px,0.32fr)_minmax(0,0.68fr)] items-start gap-7 max-[820px]:grid-cols-1">
-            <p class="m-0 text-xs font-extrabold uppercase text-[#1f6b59]">About</p>
-            <h2 class="m-0 text-[clamp(2rem,4vw,4rem)] font-extrabold leading-none text-[#151719]" id="about-title">Perfil enfocado en crear productos que se sienten claros, rapidos y confiables.</h2>
-          </div>
-
-          <div class="grid grid-cols-3 gap-4 max-[820px]:grid-cols-1">
-            <article class="min-h-48 rounded-lg border border-black/10 bg-white/65 p-6">
-              <span class="block text-2xl font-extrabold text-[#202124]">Frontend</span>
-              <p class="leading-relaxed text-[#555a60]">Web Components, Lit, arquitectura modular y experiencias pensadas para mantenimiento real.</p>
-            </article>
-            <article class="min-h-48 rounded-lg border border-black/10 bg-white/65 p-6">
-              <span class="block text-2xl font-extrabold text-[#202124]">Cloud</span>
-              <p class="leading-relaxed text-[#555a60]">Despliegues estaticos, automatizacion y distribucion con S3, CloudFront y pipelines.</p>
-            </article>
-            <article class="min-h-48 rounded-lg border border-black/10 bg-white/65 p-6">
-              <span class="block text-2xl font-extrabold text-[#202124]">Producto</span>
-              <p class="leading-relaxed text-[#555a60]">Interfaces limpias, flujos directos y decisiones tecnicas alineadas al usuario final.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="border-t border-black/10 py-[clamp(48px,7vw,88px)]" id="portfolio" aria-labelledby="portfolio-title">
-          <div class="mb-6 grid grid-cols-[minmax(150px,0.32fr)_minmax(0,0.68fr)] items-start gap-7 max-[820px]:grid-cols-1">
-            <p class="m-0 text-xs font-extrabold uppercase text-[#1f6b59]">Portfolio</p>
-            <h2 class="m-0 text-[clamp(2rem,4vw,4rem)] font-extrabold leading-none text-[#151719]" id="portfolio-title">Trabajo seleccionado</h2>
-          </div>
-
-          <div class="grid gap-4">
-            <article class="grid grid-cols-[minmax(140px,0.22fr)_minmax(180px,0.28fr)_minmax(0,0.5fr)] items-center gap-6 rounded-lg border border-black/10 bg-white/65 p-6 max-[820px]:grid-cols-1">
-              <p class="m-0 text-xs font-extrabold uppercase text-[#1f6b59]">Web platform</p>
-              <h3 class="m-0 text-[1.35rem] font-extrabold text-[#202124]">Personal site core</h3>
-              <p class="m-0 leading-relaxed text-[#555a60]">Base del sitio jaimegarfias.mx con rutas, componentes reutilizables y entrega optimizada.</p>
-            </article>
-            <article class="grid grid-cols-[minmax(140px,0.22fr)_minmax(180px,0.28fr)_minmax(0,0.5fr)] items-center gap-6 rounded-lg border border-black/10 bg-white/65 p-6 max-[820px]:grid-cols-1">
-              <p class="m-0 text-xs font-extrabold uppercase text-[#1f6b59]">Architecture</p>
-              <h3 class="m-0 text-[1.35rem] font-extrabold text-[#202124]">Open Cells + Lit</h3>
-              <p class="m-0 leading-relaxed text-[#555a60]">Aplicacion SPA con carga diferida por pagina y shell preparado para crecer por dominios.</p>
-            </article>
-            <article class="grid grid-cols-[minmax(140px,0.22fr)_minmax(180px,0.28fr)_minmax(0,0.5fr)] items-center gap-6 rounded-lg border border-black/10 bg-white/65 p-6 max-[820px]:grid-cols-1">
-              <p class="m-0 text-xs font-extrabold uppercase text-[#1f6b59]">Cloud delivery</p>
-              <h3 class="m-0 text-[1.35rem] font-extrabold text-[#202124]">AWS static hosting</h3>
-              <p class="m-0 leading-relaxed text-[#555a60]">Publicacion en infraestructura ligera con distribucion global y cacheo de assets.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="border-t border-black/10 py-[clamp(48px,7vw,88px)]" id="projects" aria-labelledby="projects-title">
-          <div class="mb-6 grid grid-cols-[minmax(150px,0.32fr)_minmax(0,0.68fr)] items-start gap-7 max-[820px]:grid-cols-1">
-            <p class="m-0 text-xs font-extrabold uppercase text-[#1f6b59]">Projects</p>
-            <h2 class="m-0 text-[clamp(2rem,4vw,4rem)] font-extrabold leading-none text-[#151719]" id="projects-title">Laboratorio de ideas</h2>
-          </div>
-
-          <div class="grid grid-cols-[minmax(0,1.4fr)_minmax(260px,0.6fr)] gap-4 max-[820px]:grid-cols-1">
-            <article class="flex min-h-64 flex-col justify-between rounded-lg border border-black/10 bg-linear-to-br from-[#1f6b59]/15 to-[#1f5ca8]/15 p-6">
-              <div>
-                <p class="m-0 text-xs font-extrabold uppercase text-[#1f6b59]">Interactive tool</p>
-                <h3 class="m-0 mt-4 text-[1.35rem] font-extrabold text-[#202124]">Random Roulette</h3>
-                <p class="leading-relaxed text-[#555a60]">
-                  Una ruleta dinamica para elegir opciones, explorar decisiones rapidas y convertir
-                  pequenos experimentos en experiencias pulidas.
-                </p>
-              </div>
-              <a class="inline-flex w-fit max-w-full break-words font-extrabold text-[#174f42] no-underline" href="#projects" aria-label="Random Roulette project preview">/projects/random-roulette</a>
-            </article>
-            <article class="min-h-64 rounded-lg border border-black/10 bg-white/65 p-6">
-              <p class="m-0 text-xs font-extrabold uppercase text-[#1f6b59]">Next</p>
-              <h3 class="m-0 mt-4 text-[1.35rem] font-extrabold text-[#202124]">Project index</h3>
-              <p class="leading-relaxed text-[#555a60]">Un espacio para documentar herramientas, prototipos y pruebas publicas.</p>
-            </article>
-          </div>
-        </section>
-      </section>
+      </main>
     `;
   }
 }
