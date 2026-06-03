@@ -20,13 +20,13 @@ export const styles = css`
   :host {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100%;
     box-sizing: border-box;
   }
   main {
     flex: 1;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
   }
 
   main ::slotted(*) {
@@ -39,6 +39,8 @@ export const styles = css`
   }
 
   main ::slotted([state="active"]) {
+    position: relative;
+    min-height: 100%;
     visibility: visible;
   }
   `;
